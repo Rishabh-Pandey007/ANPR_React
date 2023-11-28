@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import '../styles/Table.css';
 // import axios from "axios";
 
 const TableDisplay = () => {
@@ -19,16 +20,19 @@ const TableDisplay = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Data Table</h2>
+    <div className="container">
+        <div className="header">
+            <div className="text">Vehicle Overspeeding</div>
+            <div className="underline"></div>
+        </div><br></br>
       <table>
         <thead>
           <tr>
             <th>ID</th>
             <th>Image</th>
             <th>Vehicle No</th>
-            <th>Date</th>
-            <th>Time</th>
+            <th>Event-Date</th>
+            <th>Event-Time</th>
           </tr>
         </thead>
         <tbody>
