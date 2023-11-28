@@ -20,10 +20,10 @@ const TableDisplay = () => {
   }, []);
 
   return (
-    <div className="container">
-        <div className="header">
+    <div className="containers">
+        <div className="headers">
             <div className="text">Vehicle Overspeeding</div>
-            <div className="underline"></div>
+            <div className="underlines"></div>
         </div><br></br>
       <table>
         <thead>
