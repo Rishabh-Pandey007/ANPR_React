@@ -5,11 +5,18 @@ import Signup from './components/Signup';
 //import lostpassword from './components/lostpassword';
 import Upload from './components/Upload';
 import TableDisplay from './components/Table';
+import { Route, Routes } from 'react-router-dom';
+
 function App() {
   return (
     <div>
-      <TableDisplay/>
-     
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/lostpassword" element={<lostpassword />} /> */}
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/table" element={<TableDisplay />} />
+      </Routes>
     </div>
   );
 }
