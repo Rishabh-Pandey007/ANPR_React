@@ -27,6 +27,8 @@ const Signup = () => {
                 <input type="password" placeholder="Password"/>
             </div>
         </div>
+        <div className="forgot-password">{/*<Link to="/Login">*/}Already have a account!<span> Login</span>{/*</Link>*/}
+                </div>
         <div className="submit-container">
             <div className="submit">Sign Up</div>
         </div>
