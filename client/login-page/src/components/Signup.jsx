@@ -1,7 +1,7 @@
 // src/components/Signup.jsx
 import React, { useState } from "react";
 import '../styles/Login.css';
-
+import { Link } from "react-router-dom";
 import user_icon from '../Assets/person.png'
 import email_icon from '../Assets/email.png'
 import password_icon from '../Assets/password.png'
@@ -27,7 +27,7 @@ const Signup = () => {
                 <input type="password" placeholder="Password"/>
             </div>
         </div>
-        <div className="forgot-password">{/*<Link to="/Login">*/}Already have a account!<span> Login</span>{/*</Link>*/}
+        <div className="forgot-password">Already have a account! <Link to="/"><span>Login</span></Link>
                 </div>
         <div className="submit-container">
             <div className="submit">Sign Up</div>
