@@ -8,7 +8,7 @@ const TableDisplay = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5001/v1/logs', {});
+        const response = await axios.get('http://192.168.1.145:5001/v1/logs', {});
         setData(response.data); // Assuming the data is in the 'data' property
       } catch (error) {
         console.error('Error during API request:', error);
