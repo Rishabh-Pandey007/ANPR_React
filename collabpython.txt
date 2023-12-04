@@ -1,0 +1,67 @@
+!pip install easyocr
+
+import matplotlib.pyplot as plt
+import cv2
+import easyocr
+from IPython.display import Image
+
+reader = easyocr.Reader(['en'])
+
+#output = reader.readtext('/content/scaned_img_0.jpg')
+#output
+
+pip install mysql-connector-python
+
+import mysql.connector
+
+import mysql.connector
+
+from datetime import datetime
+
+db_host = 'sql12.freesqldatabase.com'
+db_user = 'sql12667212'
+db_password = 'ylWtidGppI'
+db_name = 'sql12667212'
+
+connection = mysql.connector.connect(
+    host=db_host,
+    user=db_user,
+    password=db_password,
+    database=db_name
+)
+
+
+cursor = connection.cursor()
+
+reader = easyocr.Reader(['en'])
+output = reader.readtext('/content/scaned_img_0.jpg')
+outputstr = ', '.join(map(str, output))
+vehiclenumber = outputstr
+
+current_date = datetime.now().date()
+current_time = datetime.now().time()
+
+def insert_data(data, image_path, vehicle_number, date, time):
+    try:
+       
+        insert_query = "INSERT INTO camera (vehicle_image, vehicle_number, date, time) VALUES (%s, %s, %s, %s)"
+        
+       
+        for row in data:
+            cursor.execute(insert_query, (image_path, vehicle_number, date, time))
+        
+       
+        connection.commit()
+        print("Data inserted successfully!")
+
+    except mysql.connector.Error as err:
+        print("Error: {}".format(err))
+        # Rollback the changes if an error occurs
+        connection.rollback()
+
+
+insert_data(output, '/content/scaned_img_0.jpg', vehiclenumber, current_date, current_time)
+
+
+cursor.close()
+connection.close()

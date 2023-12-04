@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import '../styles/upload.css';
 
 function Upload() {
@@ -39,8 +40,13 @@ function Upload() {
 <br></br>
     <div className="App">
       <input type="file" accept="video/*" onChange={handleFileChange} />
+      <br></br>
+      <br></br>
       <button onClick={handleUpload}>Upload Video</button>
+       
     </div>
+    <br></br>
+    <Link to="/table"><button>Show Logs</button></Link>
     </div>
     </div>
   );

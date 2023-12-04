@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../styles/Login.css';
-import { Link } from "react";
+import { Link } from "react-router-dom";
 import email_icon from '../Assets/email.png'
 import password_icon from '../Assets/password.png'
 
@@ -21,8 +21,8 @@ const Login = () => {
                 <input type="password" placeholder="Password"/>
             </div>
         </div>
-        <div className="forgot-password">{/*<Link to="/lostpassword">*/}Lost Password<span> Click Here!</span>{/*</Link>
-                <Link to="/signup">*/} New User<span> Sign Up</span>{/*</Link>*/}</div>
+        <div className="forgot-password">
+                 New User <Link to="/signup"><span>SignUp</span></Link></div>
         <div className="submit-container">
             <div className="submit">Login</div>
         </div>

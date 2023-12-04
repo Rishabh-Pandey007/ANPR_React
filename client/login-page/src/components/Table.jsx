@@ -22,7 +22,7 @@ const TableDisplay = () => {
   return (
     <div className="containers">
         <div className="headers">
-            <div className="text">Vehicle Overspeeding</div>
+            <div className="text">Vehicle Entry</div>
             <div className="underlines"></div>
         </div><br></br>
       <table>
